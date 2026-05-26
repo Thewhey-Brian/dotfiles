@@ -28,6 +28,18 @@ overwriting, so it's safe to run on a machine that already has these files.
 - `statusline-preset` — `full`
 - `commands/` — custom slash commands: `/explain`, `/review`, `/test`
 
+### Shell (`zsh/` → `~/`)
+- `.zshrc`, `.zprofile`, `.p10k.zsh` (Powerlevel10k prompt)
+- Installer sets up **oh-my-zsh** and clones the custom plugins/theme:
+  `zsh-autosuggestions`, `zsh-syntax-highlighting`, `powerlevel10k`
+- `.zshrc` also references `fzf`, `autojump`, and `conda`/`antigravity` — install
+  those separately (`brew install fzf autojump`); the conda/antigravity blocks
+  are guarded and no-op if the tools aren't present
+
+### Other (`→ ~/`, `~/.config/`)
+- `.config/starship.toml` (note: Powerlevel10k is the active prompt)
+- `.gitconfig` (name/email + git-lfs filters), `.vimrc`
+
 ## Notes
 - **No secrets** are stored here — credentials live in the OS keychain / Claude
   auth, not in these files.
