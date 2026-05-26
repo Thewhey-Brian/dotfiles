@@ -1,0 +1,4 @@
+# backups created by install.sh
+*.bak.*
+# macOS
+.DS_Store

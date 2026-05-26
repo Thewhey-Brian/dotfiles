@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(chmod:*)",
+      "WebFetch(domain:codelynx.dev)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(cp:*)",
+      "Bash(fc-list:*)",
+      "Bash(top:*)",
+      "Bash(sudo powermetrics:*)",
+      "Bash(memory_pressure 2>/dev/null | head -5; echo \"---\"; vm_stat 2>/dev/null | head -10; echo \"---\"; df -h / 2>/dev/null | tail -1)",
+      "WebFetch(domain:github.com)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(tail:*)"
+    ]
+  }
+}
