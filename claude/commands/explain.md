@@ -1,0 +1,1 @@
+Explain the file I'm looking at. Start with a one-sentence summary of what it does, then list the key functions/classes and how they connect. Keep it short — I want a mental model, not a tutorial. $ARGUMENTS

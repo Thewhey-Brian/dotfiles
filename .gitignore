@@ -1,0 +1,9 @@
+# backups created by install.sh
+*.bak.*
+# macOS
+.DS_Store
+# personal files that the configs source — never commit these
+*.local
+.gitconfig.local
+.zshrc.local
+.zprofile.local

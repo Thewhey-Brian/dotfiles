@@ -1,0 +1,1 @@
+Review the current git diff for bugs, security issues, and code quality. Be concise — only flag real problems, not style nits. Group findings by severity (critical, warning, info).
