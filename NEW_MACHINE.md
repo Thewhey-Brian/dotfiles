@@ -176,6 +176,11 @@ codex-hud --line                                        # Codex usage one-liner
 If the statusline still points at an older HUD version after the first
 session, run the HUD's setup from the newest cached version:
 `bash "$(ls -d ~/.claude/plugins/cache/claude-statusline-hud/claude-statusline-hud/* | sort -V | tail -n 1)/scripts/setup.sh"`.
+(If only an old version is cached, update it first:
+`claude plugin marketplace update claude-statusline-hud && claude plugin update claude-statusline-hud@claude-statusline-hud`.)
+Updating or re-running the HUD rewrites `statusLine` and can drop
+`hideVimModeIndicator`; if `jq .statusLine.hideVimModeIndicator ~/.claude/settings.json`
+isn't `true`, set it back.
 
 ## Notes
 
