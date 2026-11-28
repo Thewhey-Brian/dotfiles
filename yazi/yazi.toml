@@ -1,0 +1,8 @@
+[preview]
+max_width = 4096
+max_height = 4096
+
+[plugin]
+prepend_previewers = [
+	{ mime = "image/*", run = "zoom" },
+]

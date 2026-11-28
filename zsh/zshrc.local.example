@@ -1,0 +1,10 @@
+# ~/.zshrc.local — personal additions, sourced at the end of ~/.zshrc.
+# install.sh copies this to ~/.zshrc.local if you don't have one; it is never committed.
+
+# ssh shortcuts
+# alias myserver="ssh me@server.example.edu"
+
+# extra tools on PATH
+# export PATH="$HOME/tools/bin:$PATH"
+
+# conda: put the block `conda init zsh` writes here instead of in ~/.zshrc

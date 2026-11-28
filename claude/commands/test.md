@@ -1,0 +1,1 @@
+Write tests for the code I just changed. Check `git diff` to see what changed, then write focused tests covering the new/modified behavior. Use the existing test framework and patterns already in the project. $ARGUMENTS

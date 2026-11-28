@@ -1,0 +1,13 @@
+#!/bin/bash
+# gpufree [-n]   free GPUs per partition (-n: also list nodes with free GPUs)
+sinfo -h -N -p b200-batch,b200-devel,b200-fullnode,rtx-batch,rtx-devel -O "Partition:20,NodeHost:10,StateCompact:10,Gres:40,GresUsed:60" |
+awk -v nodes="$1" '
+{ p=$1; n=$2; s=$3; tot=$4; used=$5
+  sub(/\(.*/,"",tot); split(tot,a,":"); t=a[3]+0
+  sub(/\(.*/,"",used); split(used,b,":"); u=b[3]+0
+  if (s ~ /drain|drng|down|maint|resv/) { off[p]+=t; next }
+  free=t-u; F[p]+=free; T[p]+=t; if (free==t) idle[p]++
+  if (nodes=="-n" && free>0) list[p]=list[p] sprintf(" %s:%d", n, free) }
+END { printf "%-15s %6s %6s %10s %8s\n","partition","free","total","idle nodes","offline"
+  for (p in T) printf "%-15s %6d %6d %10d %8d\n", p, F[p], T[p], idle[p], off[p]
+  if (nodes=="-n") for (p in list) printf "\n%s:%s\n", p, list[p] }'

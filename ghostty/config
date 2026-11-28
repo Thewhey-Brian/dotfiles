@@ -1,0 +1,86 @@
+# --- Font ---
+font-family = "Maple Mono NF"
+font-family-bold = "Maple Mono NF"
+font-family-italic = "Maple Mono NF"
+font-family-bold-italic = "Maple Mono NF"
+font-size = 15
+font-thicken = true
+adjust-cell-height = 2
+font-feature = +liga
+font-feature = +calt
+
+# --- Unicode width handling (fixes duplicate chars over SSH) ---
+grapheme-width-method = unicode
+freetype-load-flags = no-hinting
+
+# --- Nerd Font codepoint mapping (fixes icons over SSH) ---
+font-codepoint-map = U+e000-U+f8ff=Maple Mono NF
+font-codepoint-map = U+f0000-U+fffff=Maple Mono NF
+font-codepoint-map = U+100000-U+10ffff=Maple Mono NF
+
+# --- Theme (Tokyo Night Storm - eye-friendly dark) ---
+theme = TokyoNight Storm
+
+# --- Color overrides for better readability ---
+foreground = #c8d3f5
+background = #1a1b2e
+selection-foreground = #c8d3f5
+selection-background = #3654a7
+cursor-color = #7aa2f7
+cursor-text = #1a1b2e
+
+# --- Transparency (dark glass) ---
+background-opacity = 0.88
+background-blur-radius = 25
+
+# --- Window ---
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = true
+macos-titlebar-style = native
+window-theme = ghostty
+window-save-state = always
+resize-overlay = never
+confirm-close-surface = always
+
+# --- Cursor ---
+cursor-style = block
+cursor-style-blink = false
+
+# --- Shell integration ---
+shell-integration = zsh
+shell-integration-features = no-cursor,sudo,no-title,ssh-terminfo,ssh-env
+
+# --- Clipboard ---
+copy-on-select = clipboard
+clipboard-paste-protection = true
+
+# --- Mouse ---
+mouse-hide-while-typing = true
+
+# --- Scrollback ---
+scrollback-limit = 10000
+
+# --- Quick Terminal ---
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+quick-terminal-position = top
+quick-terminal-animation-duration = 0.15
+
+# --- Keybindings (splits) ---
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+w=close_surface
+keybind = cmd+shift+enter=toggle_fullscreen
+keybind = cmd+left_bracket=previous_tab
+keybind = cmd+right_bracket=next_tab
+
+# --- Clickable URLs ---
+link-url = true
+
+# --- Working directory inheritance ---
+window-inherit-working-directory = false
+tab-inherit-working-directory = true
+split-inherit-working-directory = true
+
+# --- Auto-update ---
+auto-update = check

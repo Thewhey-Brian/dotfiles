@@ -1,0 +1,5 @@
+# Skills that live inside project repos: "name<TAB>path under $HOME".
+# install.sh links each one into ~/.claude/skills/ when that repo is cloned.
+rallyai-announcement-video	Desktop/Tech_Hack/Intelligent_Tennis/rallyai-brand/skills/announcement-video
+rallyai-tennis-kepu	Desktop/Tech_Hack/Intelligent_Tennis/tennis_kepu/.claude/skills/rallyai-tennis-kepu
+rallyai-tennis-news	Desktop/Tech_Hack/Intelligent_Tennis/tennis_news/.claude/skills/rallyai-tennis-news

@@ -1,0 +1,26 @@
+# Starship prompt config — matching the screenshot style
+
+format = """
+$conda\
+$directory\
+$git_branch\
+$git_status\
+$character"""
+
+[conda]
+format = '[$symbol$environment](bold green) '
+symbol = '🐍 '
+
+[directory]
+format = '[  $path](bold cyan) '
+truncation_length = 2
+
+[git_branch]
+format = '[$symbol$branch](bold purple) '
+
+[git_status]
+format = '[$all_status$ahead_behind](bold red) '
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'

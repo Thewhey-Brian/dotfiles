@@ -1,0 +1,87 @@
+# Codex CLI / app settings — template installed to ~/.codex/config.toml.
+# install.sh replaces __HOME__ with your home directory. Codex appends its own
+# state (new trusted projects, desktop-app MCP servers, hook trust hashes) to
+# the installed file as you use it; that machine-specific state is not kept here.
+
+model = "gpt-6.2-astra"
+model_reasoning_effort = "low"
+approvals_reviewer = "auto_review"
+service_tier = "priority"
+
+# Native status-line HUD (codex-statusline-hud). Single-line footer: the tail
+# truncates when too wide, so the most important items come first.
+tui.status_line = [
+  "model-with-reasoning",
+  "git-branch",
+  "context-remaining",
+  "five-hour-limit",
+  "weekly-limit",
+  "approval-mode",
+]
+tui.status_line_use_colors = true
+tui.screen_reader_detection_done = true
+
+[features]
+js_repl = false
+
+[desktop]
+dock-icon-preference = "codex-system"
+external-agent-import-sync-item-types = "all"
+external-agent-import-sync-enabled = true
+open-link-in-target-preference = "in-app-browser"
+
+# Plugin marketplaces shared with Claude Code. The OpenAI bundled plugins
+# (browser, computer-use, documents, ...) are added by the ChatGPT/Codex app.
+[marketplaces.claude-plugins-official]
+source_type = "git"
+source = "https://github.com/anthropics/claude-plugins-official.git"
+
+[marketplaces.claude-statusline-hud]
+source_type = "git"
+source = "https://github.com/Thewhey-Brian/claude-statusline-hud.git"
+
+[plugins."clangd-lsp@claude-plugins-official"]
+enabled = true
+
+[plugins."frontend-design@claude-plugins-official"]
+enabled = true
+
+[plugins."swift-lsp@claude-plugins-official"]
+enabled = true
+
+[plugins."claude-statusline-hud@claude-statusline-hud"]
+enabled = true
+
+# Main work folders (Codex asks to trust anything else on first use).
+[projects."__HOME__/Desktop/Tech_Hack"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/Tech_Hack/Intelligent_Tennis"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/Yale"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/Yale/Research/WhichDataTeach"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/Yale/Research/Organoid_World_Model"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/Yale/Research/WeightSpaceBio"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/Yale/Research/Model_Intro_Videos"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/Yale/SciHack"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/USC"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/USC/Research"]
+trust_level = "trusted"
+
+[projects."__HOME__/Desktop/Opportunities"]
+trust_level = "trusted"

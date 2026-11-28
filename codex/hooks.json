@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd=$(jq -r '.tool_input.command // empty'); if echo \"$cmd\" | grep -qE 'rm -rf /|:(){ :|:& };:|> /dev/sda|mkfs'; then echo 'BLOCKED: dangerous command detected' >&2; exit 2; fi"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "filepath=$(jq -r '.tool_input.file_path // empty'); ext=\"${filepath##*.}\"; case \"$ext\" in py) black \"$filepath\" 2>/dev/null || true;; js|ts|jsx|tsx|json|css) npx prettier --write \"$filepath\" 2>/dev/null || true;; esac"
+          }
+        ]
+      }
+    ]
+  }
+}
