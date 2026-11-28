@@ -14,6 +14,7 @@ brew "yazi"          # y
 
 # AI coding tools (Claude Code itself comes from its native installer: ./install.sh claude)
 brew "jq"            # both statusline HUDs and the Claude Code hooks need it
+brew "black"         # Claude/Codex format-on-save hook for .py files
 brew "gh"            # GitHub CLI
 brew "hf"            # Hugging Face CLI (hf auth login, hf download)
 cask "codex" unless File.exist?("#{Dir.home}/.local/bin/codex")  # OpenAI Codex CLI

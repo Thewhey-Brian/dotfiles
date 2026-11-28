@@ -30,9 +30,9 @@ _has fzf && source <(fzf --zsh)
 # --- Modern CLI replacements ---
 _has bat && alias cat="bat"
 if _has eza; then
-  alias ls="eza --icons"
-  alias ll="eza -lah --icons --git"
-  alias lt="eza --tree --icons --level=2"
+  alias ls="eza --icons=auto"
+  alias ll="eza -lah --icons=auto --git"
+  alias lt="eza --tree --icons=auto --level=2"
 fi
 
 # --- Tool shortcuts ---

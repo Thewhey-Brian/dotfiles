@@ -72,8 +72,8 @@ Parts: `ghostty zsh git vim yazi starship` (default), plus `claude` and
   dangerous-command blocker), statusline HUD (`hideVimModeIndicator`),
   enabled plugins + the `claude-statusline-hud` marketplace, effort levels
   (`low` by default, per-model overrides in `modelSettings`), fullscreen TUI,
-  dark theme (the auto-mode `environment` notes stay on each machine — they
-  name private projects and paths)
+  dark theme, auto permission mode by default (the auto-mode `environment`
+  notes stay on each machine — they name private projects and paths)
 - `settings.local.json` — permission allowlist
 - `statusline-preset` — `full`
 - `commands/` — custom slash commands: `/explain`, `/review`, `/test`
